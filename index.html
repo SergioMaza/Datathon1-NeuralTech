@@ -7,7 +7,7 @@
       body {
         margin: 0;
         padding: 0;
-        height: 250vh; /* Asegúrate de que el fondo no sea más alto que la pantalla */
+        height: 350vh; /* Asegúrate de que el fondo no sea más alto que la pantalla */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -219,109 +219,204 @@
         <h1 id="149af64c-2b39-809e-a414-c3fc57cd0359" class="">Descripción</h1>
         <p id="149af64c-2b39-8062-91af-ea21622171d2" class="">
           En la primera edición de la competición del Equipo de Inteligencia
-          Artificial del Club de Informática, presentamos un desafío:
-          pronosticar doce horas de flujo de tráfico en una metrópolis de EE.
-          UU. Las series temporales de este conjunto de datos incluyen
-          coordenadas de ubicación y dirección de viaje, una combinación que
-          pondrá a prueba vuestra capacidad de predicción espacio-temporal en
-          una red de tráfico.
+          Artificial del Club de Informática, presentamos un desafío fascinante:
+          analizar y modelar los accidentes de tráfico registrados en la Ciudad
+          de Madrid entre 2020 y 2024 por la Policía Municipal.
+        </p>
+        <p class="">
+          IMPORTANTE: Se incluye un registro por persona implicada en el
+          accidente .
+        </p>
+        <p class="">
+          ¿Qué técnicas liderarán el camino? ¿Será un enfoque basado en modelos
+          predictivos tradicionales como la regresión logística? ¿O tal vez un
+          enfoque innovador en clustering y segmentación? ¡El desafío está
+          servido, y estamos emocionados por ver vuestra creatividad en acción!
         </p>
         <p id="149af64c-2b39-80fe-a515-fec97699e66a" class=""></p>
-        <p id="149af64c-2b39-80bc-a57c-cf155ef564ad" class="">
-          ¿Qué modelo dará mejores resultados? ¿La clásica regresión lineal?
-          ¿Los populares árboles de decisión? ¿O quizás un clustering? ¡Estamos
-          ansiosos por descubrirlo!
-        </p>
         <h1 id="149af64c-2b39-803f-921a-f49baa63dd7b" class="">Evaluación</h1>
         <p id="149af64c-2b39-80aa-bbf7-dcdc35ab9298" class="">
-          Las presentaciones se evalúan en función del error absoluto medio
-          entre los valores de congestión previstos y reales para cada período
-          de tiempo en el conjunto de pruebas.
+          Los participantes serán evaluados en tres aspectos clave:
         </p>
+        <ul id="evaluation-criteria" class="bulleted-list">
+          <li style="list-style-type: disc">
+            <strong>Precisión del Modelo:</strong>
+            <ul>
+              <li>
+                El rendimiento del modelo será el criterio principal de
+                evaluación. Se utilizarán métricas adecuadas según la naturaleza
+                del problema, como MAE, RMSE o R², para medir la calidad de las
+                predicciones realizadas.
+              </li>
+            </ul>
+          </li>
+          <li style="list-style-type: disc">
+            <strong>Limpieza del Notebook:</strong>
+            <ul>
+              <li>
+                Se valorará la claridad y organización del notebook presentado.
+                Un flujo de trabajo bien estructurado, con secciones claramente
+                diferenciadas y visualizaciones relevantes, será fundamental
+                para una buena puntuación.
+              </li>
+            </ul>
+          </li>
+          <li style="list-style-type: disc">
+            <strong>Documentación:</strong>
+            <ul>
+              <li>
+                El código debe estar correctamente documentado, con comentarios
+                que expliquen su propósito y funcionamiento. Además, la
+                legibilidad y el orden del código serán esenciales para
+                facilitar su comprensión y replicabilidad. No será necesario un
+                documento aparte para la documentación.
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p class="">
+          El equilibrio entre un modelo preciso y una presentación profesional
+          del trabajo será clave para destacar en esta competición.
+        </p>
+
         <h1 id="149af64c-2b39-807d-86c2-c3d0d862001b" class="">
-          Archivo de envío
+          ¿Qué tengo que enviar?
         </h1>
         <p id="149af64c-2b39-80d0-b51c-ea0275dc4487" class="">
-          Para cada row_id del conjunto de pruebas, se debe predecir una
-          medición de congestión. El archivo debe contener un encabezado y tener
+          Para cada num_expediente del conjunto de pruebas, se debe predecir la
+          lesividadque tendría. El archivo debe contener un encabezado y tener
           el siguiente formato:
         </p>
         <p id="149af64c-2b39-809c-86ba-d666fec93d4f" class="">
           <code
-            >row_id,congestion<br />140140,0.0<br />140141,0.0<br />140142,0.0<br />...<br
+            >row_id,congestion<br />2022S000029,0<br />2024S000070,0<br />2020S002443,0<br />...<br
           /></code>
         </p>
         <p id="149af64c-2b39-80d9-8789-d94576b5f19f" class="">
           El objetivo de congestión tiene valores enteros de 0 a 100, pero las
           predicciones pueden ser cualquier número de punto flotante.
         </p>
-        <h1 id="149af64c-2b39-8030-bbf3-d2099a13bf6f" class="">
-          Descripción del conjunto de datos
-        </h1>
-        <p id="149af64c-2b39-80a3-88b8-de5f02f6aabe" class="">
-          En esta competición, pronosticareis doce horas de flujo de tráfico en
-          un área metropolitana importante de EE. UU. Las características
-          temporales, espaciales y direccionales te permitirán modelar las
-          interacciones en toda la red de carreteras.
-        </p>
         <h1 id="149af64c-2b39-800f-9a0d-db8d5c5207c6" class="">
           Descripciones de archivos y campos
         </h1>
         <ul id="149af64c-2b39-807d-8a8f-fd967f227f36" class="bulleted-list">
           <li style="list-style-type: disc">
-            <strong>train.csv</strong> - el conjunto de entrenamiento, que
-            contiene mediciones de congestión del tráfico en 65 carreteras desde
-            abril hasta septiembre de 1991.
-            <ul id="149af64c-2b39-80d0-83a7-fd41dfa5282f" class="bulleted-list">
+            <strong>df_train.csv</strong> - Conjunto de datos que contiene
+            registros de accidentes de tráfico en la Ciudad de Madrid desde 2020
+            hasta 2024
+            <ul id="num_expediente" class="bulleted-list">
               <li style="list-style-type: circle">
-                <code>row_id</code> - Un identificador único para cada registro
+                <code>num_expediente</code> - Identificador único para cada
+                accidente registrado.
               </li>
             </ul>
-            <ul id="149af64c-2b39-8052-af2b-e0f8428a074a" class="bulleted-list">
+            <ul id="fecha" class="bulleted-list">
               <li style="list-style-type: circle">
-                <code>time</code> - El período de 20 minutos en el que se tomó
-                cada medición
+                <code>fecha</code> - Fecha en la que ocurrió el accidente.
               </li>
             </ul>
-            <ul id="149af64c-2b39-80a0-8354-dc4077c00631" class="bulleted-list">
+            <ul id="hora" class="bulleted-list">
               <li style="list-style-type: circle">
-                <code>x</code> - La coordenada este-oeste del punto medio de la
-                carretera
+                <code>hora</code> - Hora aproximada del accidente.
               </li>
             </ul>
-            <ul id="149af64c-2b39-80e6-a97b-eb11ba6078ec" class="bulleted-list">
+            <ul id="localizacion" class="bulleted-list">
               <li style="list-style-type: circle">
-                <code>y</code> - La coordenada norte-sur del punto medio de la
-                carretera
+                <code>localizacion</code> - Descripción textual de la ubicación
+                del accidente (intersecciones, direcciones, etc.).
               </li>
             </ul>
-            <ul id="149af64c-2b39-80a9-96eb-fdac9791e8c5" class="bulleted-list">
+            <ul id="numero" class="bulleted-list">
               <li style="list-style-type: circle">
-                <code>direction</code> - La dirección del tráfico en la calzada.
-                Por ejemplo, &quot;EB&quot; indica dirección &quot;este&quot; y
-                &quot;SW&quot; indica dirección &quot;suroeste&quot;
+                <code>numero</code> - Número de portal o referencia específica
+                dentro de la localización.
               </li>
             </ul>
-            <ul id="149af64c-2b39-803e-8d7a-f99cde8bba52" class="bulleted-list">
+            <ul id="cod_distrito" class="bulleted-list">
               <li style="list-style-type: circle">
-                <code>congestion</code> - Los niveles de congestión de la
-                carretera medidos cada hora (variable objetivo). Los valores
-                están normalizados en una escala de 0 a 100
+                <code>cod_distrito</code> - Código numérico que identifica el
+                distrito de Madrid donde ocurrió el accidente.
+              </li>
+            </ul>
+            <ul id="distrito" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>distrito</code> - Nombre del distrito correspondiente al
+                código anterior.
+              </li>
+            </ul>
+            <ul id="tipo_accidente" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>tipo_accidente</code> - Tipo de accidente (colisión,
+                choque, caída, etc.).
+              </li>
+            </ul>
+            <ul id="estado_meteorologico" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>estado_meteorológico</code> - Condiciones meteorológicas
+                en el momento del accidente (despejado, lluvia, etc.).
+              </li>
+            </ul>
+            <ul id="tipo_vehiculo" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>tipo_vehiculo</code> - Tipo de vehículo implicado
+                (turismo, ciclomotor, etc.).
+              </li>
+            </ul>
+            <ul id="tipo_persona" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>tipo_persona</code> - Rol de la persona implicada
+                (conductor, pasajero, peatón, etc.).
+              </li>
+            </ul>
+            <ul id="rango_edad" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>rango_edad</code> - Grupo de edad de la persona implicada
+                en el accidente (ej. "De 21 a 24 años").
+              </li>
+            </ul>
+            <ul id="sexo" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>sexo</code> - Género de la persona implicada (Hombre,
+                Mujer o Desconocido).
+              </li>
+            </ul>
+            <ul id="lesividad" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>lesividad</code> - Nivel de lesiones sufrido por la
+                persona (1: Leve, 2: Grave, 4: Fallecimiento).
+              </li>
+            </ul>
+            <ul id="coordenada_x_utm" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>coordenada_x_utm</code> - Coordenada UTM Este que indica
+                la posición geográfica del accidente.
+              </li>
+            </ul>
+            <ul id="coordenada_y_utm" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>coordenada_y_utm</code> - Coordenada UTM Norte que indica
+                la posición geográfica del accidente.
+              </li>
+            </ul>
+            <ul id="positiva_alcohol" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>positiva_alcohol</code> - Indicador de si la persona dio
+                positivo en alcohol (S: Sí, N: No).
+              </li>
+            </ul>
+            <ul id="positiva_droga" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>positiva_droga</code> - Indicador de si la persona dio
+                positivo en sustancias estupefacientes (S: Sí, N: No).
               </li>
             </ul>
           </li>
         </ul>
         <ul id="149af64c-2b39-8043-80cb-e83850d42f66" class="bulleted-list">
           <li style="list-style-type: disc">
-            <strong>test.csv </strong>- El conjunto de pruebas; contiene datos
-            para predecir la congestión por hora en carreteras identificadas por
-            coordenadas y dirección de viaje para el día 30-09-1991.
-          </li>
-        </ul>
-        <ul id="149af64c-2b39-8034-916b-c92c41b61ea1" class="bulleted-list">
-          <li style="list-style-type: disc">
-            <strong>sample_submission.csv</strong> - Un archivo de ejemplo que
-            muestra el formato correcto para los envíos.
+            <strong>df_test.csv</strong>- Conjunto de datos sin la lesividad.
+            Los num_expediente de este dataset serán los utilizados para las
+            predicciones de lesividad
           </li>
         </ul>
         <h1 id="149af64c-2b39-806e-81c3-eed5a1f6d524" class="">Datasets</h1>
