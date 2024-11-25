@@ -381,12 +381,6 @@
                 Mujer o Desconocido).
               </li>
             </ul>
-            <ul id="lesividad" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>lesividad</code> - Nivel de lesiones sufrido por la
-                persona (1: Leve, 2: Grave, 4: Fallecimiento).
-              </li>
-            </ul>
             <ul id="coordenada_x_utm" class="bulleted-list">
               <li style="list-style-type: circle">
                 <code>coordenada_x_utm</code> - Coordenada UTM Este que indica
@@ -408,9 +402,26 @@
             <ul id="positiva_droga" class="bulleted-list">
               <li style="list-style-type: circle">
                 <code>positiva_droga</code> - Indicador de si la persona dio
-                positivo en sustancias estupefacientes (S: Sí, N: No).
+                positivo en haber consumido sustancias estupefacientes (1.0: Sí, Vació: No).
               </li>
             </ul>
+            <ul id="lesividad" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>lesividad</code> - Identificador de la lesión, con los siguientes valores posibles:
+                <ul>
+                  <li>'Asistencia sanitaria inmediata en centro de salud o mutua': 1</li>
+                  <li>'Sin asistencia sanitaria': 2</li>
+                  <li>'Ingreso inferior o igual a 24 horas': 3</li>
+                  <li>'Asistencia sanitaria sólo en el lugar del accidente': 4</li>
+                  <li>'Atención en urgencias sin posterior ingreso': 5</li>
+                  <li>'Ingreso superior a 24 horas': 6</li>
+                  <li>'Asistencia sanitaria ambulatoria con posterioridad': 7</li>
+                  <li>'Fallecido 24 horas': 8</li>
+                  <li>'Se desconoce': 9</li>
+                </ul>
+              </li>
+            </ul>
+            
           </li>
         </ul>
         <ul id="149af64c-2b39-8043-80cb-e83850d42f66" class="bulleted-list">
