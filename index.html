@@ -1,482 +1,546 @@
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Datathon I - Neuraltech</title>
-    <style>
-      /* General Styles */
-      body {
-        margin: 0;
-        padding: 0;
-        height: 350vh; /* Asegúrate de que el fondo no sea más alto que la pantalla */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: "Arial", sans-serif;
-        color: #ffffff;
-        background: linear-gradient(
-          120deg,
-          #6a11cb,
-          /* Morado más oscuro */ #2575fc,
-          /* Azul vibrante */ #8e44ad,
-          /* Morado intermedio */ #9b59b6 /* Morado claro */
-        );
-        background-size: 400% 400%; /* Cambié el tamaño del fondo para un mayor movimiento */
-        animation: gradientAnimation 15s ease infinite; /* Aceleré la animación */
-      }
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datathon I - Neuraltech</title>
+  <style>
+    /* General Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: "Arial", sans-serif;
+      color: #ffffff;
+      background: linear-gradient(
+              120deg,
+              #6a11cb,
+              #2575fc,
+              #8e44ad,
+              #9b59b6
+      );
+      background-size: 400% 400%;
+      animation: gradientAnimation 15s ease infinite;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
 
-      /* Background Animation */
-      @keyframes gradientAnimation {
-        0% {
-          background-position: 0% 50%;
-        }
-        25% {
-          background-position: 50% 50%;
-        }
-        50% {
-          background-position: 100% 50%;
-        }
-        75% {
-          background-position: 50% 50%;
-        }
-        100% {
-          background-position: 0% 50%;
-        }
+    /* Background Animation */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
       }
-
-      /* Content Styling */
-      .page {
-        background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
-        border-radius: 15px;
-        padding: 2rem;
-        max-width: 800px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      25% {
+        background-position: 50% 50%;
       }
+      50% {
+        background-position: 100% 50%;
+      }
+      75% {
+        background-position: 50% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
-      /* Titles */
+    /* Content Styling */
+    .page {
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 15px;
+      padding: 2rem;
+      max-width: 90%;
+      width: 800px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+      text-align: justify;
+    }
+
+    /* Titles */
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin-top: 2rem;
+      color: #a29bfe;
+      border-bottom: 2px solid #6c5ce7;
+      padding-bottom: 0.3rem;
+      text-align: left;
+    }
+
+    /* Paragraphs */
+    p {
+      line-height: 1.6;
+      font-size: 1rem;
+      color: #dfe6e9;
+      margin: 0.5rem 0;
+      text-align: justify;
+    }
+
+    /* Code Blocks */
+    code {
+      font-family: "Courier New", Courier, monospace;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #81ecec;
+      padding: 0.3rem;
+      border-radius: 5px;
+      display: inline-block;
+    }
+
+    /* Lists */
+    ul {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+    }
+
+    ul li {
+      margin: 0.5rem 0;
+      color: #b2bec3;
+    }
+
+    /* Links */
+    a {
+      color: #74b9ff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Logos Container */
+    .logos-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      background-color: #6c5ce7;
+      object-fit: contain;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px #2811db;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 16px #2309e7;
+    }
+
+    /* Credits */
+    .credits-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .credit {
+      text-align: center;
+      color: #ffffff;
+      max-width: 150px;
+    }
+
+    .credit img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid #a29bfe;
+    }
+
+    .credit-name {
+      font-size: 1rem;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 2rem;
+    }
+
+    span.sans {
+      display: block;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #dfe6e9;
+      opacity: 0.7;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
       .page-title {
-        font-size: 3.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        text-align: center;
-        color: #ffffff;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-        border-bottom: none;
+        font-size: 2rem;
       }
 
-      /* Section Titles */
-      h1 {
-        font-size: 1.8rem;
-        font-weight: bold;
-        margin-top: 2rem;
-        margin-bottom: 0.5rem;
-        color: #a29bfe;
-        border-bottom: 2px solid #6c5ce7;
-        padding-bottom: 0.3rem;
-      }
-
-      /* Paragraphs */
-      p {
-        line-height: 1.6;
-        font-size: 1rem;
-        color: #dfe6e9;
-        margin: 0.5rem 0;
-      }
-
-      /* Code Blocks */
-      code {
-        font-family: "Courier New", Courier, monospace;
-        background-color: rgba(255, 255, 255, 0.1);
-        color: #81ecec;
-        padding: 0.3rem;
-        border-radius: 5px;
-        display: inline-block;
-        margin: 0.5rem 0;
-      }
-
-      /* Lists */
-      ul {
-        margin: 1rem 0;
-        padding-left: 1.5rem;
-      }
-
-      ul li {
-        margin: 0.5rem 0;
-        color: #b2bec3;
-      }
-
-      /* Links */
-      a {
-        color: #74b9ff;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* Contenedor de los logos con fondo */
-      .logos-container {
-        display: flex;
-        justify-content: center;
-        gap: 3rem; /* Espacio entre los logos */
-        margin-bottom: 3rem; /* Espacio debajo de los logos */
-        border-radius: 20px; /* Bordes redondeados del fondo */
-        padding: 1rem 2rem; /* Espaciado interno */
-      }
-
-      /* Estilo de cada logo */
       .logo {
-        width: 150px; /* Tamaño fijo para todos los logos */
-        height: 150px; /* Establecer altura para mantener la proporción */
-        background-color: #6c5ce7; /* Fondo para las imágenes */
-        object-fit: contain; /* Mantiene la proporción */
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos al pasar el ratón */
-        border-radius: 10px; /* Bordes redondeados */
-        box-shadow: 0 4px 12px #2811db; /* Sombra suave para dar profundidad */
-        max-width: 100%; /* Asegura que las imágenes no sobrepasen el tamaño establecido */
+        width: 100px;
+        height: 100px;
       }
 
-      /* Efecto al pasar el ratón sobre los logos */
-      .logo:hover {
-        transform: scale(1.1); /* Hace que el logo se agrande más */
-        box-shadow: 0 8px 16px #2309e7; /* Sombra más fuerte al hacer hover */
+      h1 {
+        font-size: 1.5rem;
       }
 
-      /* Credits */
-      .credits-container {
-        display: flex;
-        justify-content: center;
-        gap: 2rem; /* Espacio entre las imágenes */
-        margin-top: 3rem; /* Margen superior */
-      }
-
-      .credit {
-        text-align: center;
-        color: #ffffff;
+      p {
+        font-size: 0.9rem;
       }
 
       .credit img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-        border: 3px solid #a29bfe;
+        width: 80px;
+        height: 80px;
       }
 
       .credit-name {
-        font-size: 1.2rem;
-        font-weight: bold;
-      }
-
-      /* Footer */
-      span.sans {
-        display: block;
-        text-align: center;
         font-size: 0.9rem;
-        color: #dfe6e9;
-        margin-top: 1rem;
-        opacity: 0.7;
       }
-    </style>
-  </head>
-  <body>
-    <article id="149af64c-2b39-8055-b828-ecf611f03474" class="page sans">
-      <header>
-        <h1 class="page-title">Datathon I - Neuraltech</h1>
-        <p class="page-description"></p>
-      </header>
-      <div class="logos-container">
-        <a
-          href="https://www.instagram.com/c_int.uem/profilecard/?igsh=MTJlemoxMzNwOXExYw=="
-          target="_blank"
-        >
-          <img
-            src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/cint_logo.png"
-            alt="C_int Logo"
-            class="logo"
-          />
-        </a>
-        <a href="https://discord.gg/6nFxBzNNfP" target="_blank">
-          <img
-            src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/neuraltech_logo.png"
-            alt="Neuraltech Logo"
-            class="logo"
-          />
-        </a>
-        <a
-          href="https://universidadeuropea.com/conocenos/madrid/"
-          target="_blank"
-        >
-          <img
-            src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/uem_logo.png"
-            alt="UEM Logo"
-            class="logo"
-          />
-        </a>
-      </div>
-      <div class="page-body">
-        <h1 id="149af64c-2b39-809e-a414-c3fc57cd0359" class="">Descripción</h1>
-        <p id="149af64c-2b39-8062-91af-ea21622171d2" class="">
-          En la primera edición de la competición del Equipo de Inteligencia
-          Artificial del Club de Informática, presentamos un desafío fascinante:
-          analizar y modelar los accidentes de tráfico registrados en la Ciudad
-          de Madrid entre 2020 y 2024 por la Policía Municipal.
-        </p>
-        <p class="">
-          IMPORTANTE: Se incluye un registro por persona implicada en el
-          accidente .
-        </p>
-        <p class="">
-          ¿Qué técnicas liderarán el camino? ¿Será un enfoque basado en modelos
-          predictivos tradicionales como la regresión logística? ¿O tal vez un
-          enfoque innovador en clustering y segmentación? ¡El desafío está
-          servido, y estamos emocionados por ver vuestra creatividad en acción!
-        </p>
-        <p id="149af64c-2b39-80fe-a515-fec97699e66a" class=""></p>
-        <h1 id="149af64c-2b39-803f-921a-f49baa63dd7b" class="">Evaluación</h1>
-        <p id="149af64c-2b39-80aa-bbf7-dcdc35ab9298" class="">
-          Los participantes serán evaluados en tres aspectos clave:
-        </p>
-        <ul id="evaluation-criteria" class="bulleted-list">
-          <li style="list-style-type: disc">
-            <strong>Precisión del Modelo:</strong>
-            <ul>
-              <li>
-                El rendimiento del modelo será el criterio principal de
-                evaluación. Se utilizarán métricas adecuadas según la naturaleza
-                del problema, como MAE, RMSE o R², para medir la calidad de las
-                predicciones realizadas.
-              </li>
-            </ul>
-          </li>
-          <li style="list-style-type: disc">
-            <strong>Limpieza del Notebook:</strong>
-            <ul>
-              <li>
-                Se valorará la claridad y organización del notebook presentado.
-                Un flujo de trabajo bien estructurado, con secciones claramente
-                diferenciadas y visualizaciones relevantes, será fundamental
-                para una buena puntuación.
-              </li>
-            </ul>
-          </li>
-          <li style="list-style-type: disc">
-            <strong>Documentación:</strong>
-            <ul>
-              <li>
-                El código debe estar correctamente documentado, con comentarios
-                que expliquen su propósito y funcionamiento. Además, la
-                legibilidad y el orden del código serán esenciales para
-                facilitar su comprensión y replicabilidad. No será necesario un
-                documento aparte para la documentación.
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <p class="">
-          El equilibrio entre un modelo preciso y una presentación profesional
-          del trabajo será clave para destacar en esta competición.
-        </p>
+    }
 
-        <h1 id="149af64c-2b39-807d-86c2-c3d0d862001b" class="">
-          ¿Qué tengo que enviar?
-        </h1>
-        <p id="149af64c-2b39-80d0-b51c-ea0275dc4487" class="">
-          Para cada <code>num_expediente</code> del conjunto de pruebas, se debe predecir la
-          <code>lesividad</code> que tendría. El archivo debe contener un encabezado y tener
-          el siguiente formato:
-        </p>
-        <p id="149af64c-2b39-809c-86ba-d666fec93d4f" class="">
-          <code
-            >num_expediente,lesividad<br />2022S000029,0<br />2024S000070,0<br />2020S002443,0<br />...<br
-          /></code>
-        </p>
-        <p id="149af64c-2b39-80a1-87f3-d9e85c1b72c6" class="">
-          Además del archivo CSV con las predicciones, es obligatorio entregar un notebook que
-          contenga el código utilizado para generar dichas predicciones. El notebook debe estar
-          correctamente documentado y organizado, facilitando la comprensión del proceso seguido.
-        </p>
-        <h1 id="149af64c-2b39-800f-9a0d-db8d5c5207c6" class="">
-          Descripciones de archivos y campos
-        </h1>
-        <ul id="149af64c-2b39-807d-8a8f-fd967f227f36" class="bulleted-list">
-          <li style="list-style-type: disc">
-            <strong>df_train.csv</strong> - Conjunto de datos que contiene
-            registros de accidentes de tráfico en la Ciudad de Madrid desde 2020
-            hasta 2024
-            <ul id="num_expediente" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>num_expediente</code> - Identificador único para cada
-                accidente registrado.
-              </li>
-            </ul>
-            <ul id="fecha" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>fecha</code> - Fecha en la que ocurrió el accidente.
-              </li>
-            </ul>
-            <ul id="hora" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>hora</code> - Hora aproximada del accidente.
-              </li>
-            </ul>
-            <ul id="localizacion" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>localizacion</code> - Descripción textual de la ubicación
-                del accidente (intersecciones, direcciones, etc.).
-              </li>
-            </ul>
-            <ul id="numero" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>numero</code> - Número de portal o referencia específica
-                dentro de la localización.
-              </li>
-            </ul>
-            <ul id="cod_distrito" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>cod_distrito</code> - Código numérico que identifica el
-                distrito de Madrid donde ocurrió el accidente.
-              </li>
-            </ul>
-            <ul id="distrito" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>distrito</code> - Nombre del distrito correspondiente al
-                código anterior.
-              </li>
-            </ul>
-            <ul id="tipo_accidente" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>tipo_accidente</code> - Tipo de accidente (colisión,
-                choque, caída, etc.).
-              </li>
-            </ul>
-            <ul id="estado_meteorologico" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>estado_meteorológico</code> - Condiciones meteorológicas
-                en el momento del accidente (despejado, lluvia, etc.).
-              </li>
-            </ul>
-            <ul id="tipo_vehiculo" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>tipo_vehiculo</code> - Tipo de vehículo implicado
-                (turismo, ciclomotor, etc.).
-              </li>
-            </ul>
-            <ul id="tipo_persona" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>tipo_persona</code> - Rol de la persona implicada
-                (conductor, pasajero, peatón, etc.).
-              </li>
-            </ul>
-            <ul id="rango_edad" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>rango_edad</code> - Grupo de edad de la persona implicada
-                en el accidente (ej. "De 21 a 24 años").
-              </li>
-            </ul>
-            <ul id="sexo" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>sexo</code> - Género de la persona implicada (Hombre,
-                Mujer o Desconocido).
-              </li>
-            </ul>
-            <ul id="coordenada_x_utm" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>coordenada_x_utm</code> - Coordenada UTM Este que indica
-                la posición geográfica del accidente.
-              </li>
-            </ul>
-            <ul id="coordenada_y_utm" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>coordenada_y_utm</code> - Coordenada UTM Norte que indica
-                la posición geográfica del accidente.
-              </li>
-            </ul>
-            <ul id="positiva_alcohol" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>positiva_alcohol</code> - Indicador de si la persona dio
-                positivo en alcohol (S: Sí, N: No).
-              </li>
-            </ul>
-            <ul id="positiva_droga" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>positiva_droga</code> - Indicador de si la persona dio
-                positivo en haber consumido sustancias estupefacientes (1.0: Sí, Vació: No).
-              </li>
-            </ul>
-            <ul id="lesividad" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>lesividad</code> - Identificador de la lesión, con los siguientes valores posibles:
-                <ul>
-                  <li>Asistencia sanitaria inmediata en centro de salud o mutua: 1</li>
-                  <li>Sin asistencia sanitaria: 2</li>
-                  <li>Ingreso inferior o igual a 24 horas: 3</li>
-                  <li>Asistencia sanitaria sólo en el lugar del accidente: 4</li>
-                  <li>Atención en urgencias sin posterior ingreso: 5</li>
-                  <li>Ingreso superior a 24 horas: 6</li>
-                  <li>Asistencia sanitaria ambulatoria con posterioridad: 7</li>
-                  <li>Fallecido 24 horas: 8</li>
-                  <li>Se desconoce: 9</li>
-                </ul>
-              </li>
-            </ul>
-            
+    @media (max-width: 480px) {
+      .page {
+        padding: 1rem;
+      }
+
+      .page-title {
+        font-size: 1.8rem;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      .credit img {
+        width: 60px;
+        height: 60px;
+      }
+
+      .credit-name {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<article id="149af64c-2b39-8055-b828-ecf611f03474" class="page sans">
+  <header>
+    <h1 class="page-title">Datathon I - Neuraltech</h1>
+    <p class="page-description"></p>
+  </header>
+  <div class="logos-container">
+    <a
+            href="https://www.instagram.com/c_int.uem/profilecard/?igsh=MTJlemoxMzNwOXExYw=="
+            target="_blank"
+    >
+      <img
+              src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/cint_logo.png"
+              alt="C_int Logo"
+              class="logo"
+      />
+    </a>
+    <a href="https://discord.gg/6nFxBzNNfP" target="_blank">
+      <img
+              src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/neuraltech_logo.png"
+              alt="Neuraltech Logo"
+              class="logo"
+      />
+    </a>
+    <a
+            href="https://universidadeuropea.com/conocenos/madrid/"
+            target="_blank"
+    >
+      <img
+              src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/uem_logo.png"
+              alt="UEM Logo"
+              class="logo"
+      />
+    </a>
+  </div>
+  <div class="page-body">
+    <h1 id="149af64c-2b39-809e-a414-c3fc57cd0359" class="">Descripción</h1>
+    <p id="149af64c-2b39-8062-91af-ea21622171d2" class="">
+      En la primera edición de la competición del Equipo de Inteligencia
+      Artificial del Club de Informática, presentamos un desafío fascinante:
+      analizar y modelar los accidentes de tráfico registrados en la Ciudad
+      de Madrid entre 2020 y 2024 por la Policía Municipal.
+    </p>
+    <p class="">
+      IMPORTANTE: Se incluye un registro por persona implicada en el
+      accidente .
+    </p>
+    <p class="">
+      ¿Qué técnicas liderarán el camino? ¿Será un enfoque basado en modelos
+      predictivos tradicionales como la regresión logística? ¿O tal vez un
+      enfoque innovador en clustering y segmentación? ¡El desafío está
+      servido, y estamos emocionados por ver vuestra creatividad en acción!
+    </p>
+    <p id="149af64c-2b39-80fe-a515-fec97699e66a" class=""></p>
+    <h1 id="149af64c-2b39-803f-921a-f49baa63dd7b" class="">Evaluación</h1>
+    <p id="149af64c-2b39-80aa-bbf7-dcdc35ab9298" class="">
+      Los participantes serán evaluados en tres aspectos clave:
+    </p>
+    <ul id="evaluation-criteria" class="bulleted-list">
+      <li style="list-style-type: disc">
+        <strong>Precisión del Modelo:</strong>
+        <ul>
+          <li>
+            El rendimiento del modelo será el criterio principal de
+            evaluación. Se utilizarán métricas adecuadas según la naturaleza
+            del problema, como MAE, RMSE o R², para medir la calidad de las
+            predicciones realizadas.
           </li>
         </ul>
-        <ul id="149af64c-2b39-8043-80cb-e83850d42f66" class="bulleted-list">
-          <li style="list-style-type: disc">
-            <strong>df_test.csv</strong>- Conjunto de datos sin la lesividad.
-            Los num_expediente de este dataset serán los utilizados para las
-            predicciones de lesividad
+      </li>
+      <li style="list-style-type: disc">
+        <strong>Limpieza del Notebook:</strong>
+        <ul>
+          <li>
+            Se valorará la claridad y organización del notebook presentado.
+            Un flujo de trabajo bien estructurado, con secciones claramente
+            diferenciadas y visualizaciones relevantes, será fundamental
+            para una buena puntuación.
           </li>
         </ul>
-        <h1 id="149af64c-2b39-806e-81c3-eed5a1f6d524" class="">Datasets</h1>
-        <figure id="149af64c-2b39-809c-89bb-de04f268a472">
-          <div class="source">
-            <a
-              href="https://github.com/SergioMaza/Datathon1-NeuralTech/raw/refs/heads/master/datathon1_neuraltech_data.zip"
-              >datathon1-neuraltech.zip</a
-            >
-          </div>
-        </figure>
-        <h1 id="149af64c-2b39-8030-bbf3-d2099a13bf6f" class="">Créditos</h1>
-        <div class="credits-container">
-          <div class="credit">
-            <a
-              href="https://www.linkedin.com/in/luc%C3%ADa-doval-abilleira-67ba692a7/"
-              target="_blank"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/121610017?v=4"
-                alt="Lucía Doval"
-              />
-              <p class="credit-name">Lucía Doval</p>
-            </a>
-          </div>
-          <div class="credit">
-            <a
-              href="https://www.linkedin.com/in/sergio-maza-herranz-513a87263/"
-              target="_blank"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/105326859?v=4"
-                alt="Imagen 2"
-              />
-              <p class="credit-name">Sergio Maza</p>
-            </a>
-          </div>
-        </div>
-        <p id="149af64c-2b39-8094-8fd2-cbe9bdfc9af3" class=""></p>
-        <p id="149af64c-2b39-80cb-bfc8-f663384065bd" class=""></p>
-        <p id="149af64c-2b39-803b-8a8f-cd9d1b8a5a2e" class=""></p>
-      </div>
-      <footer>
-        <span class="sans"
-          >© 2024 Neuraltech | Todos los derechos reservados</span
+      </li>
+      <li style="list-style-type: disc">
+        <strong>Documentación:</strong>
+        <ul>
+          <li>
+            El código debe estar correctamente documentado, con comentarios
+            que expliquen su propósito y funcionamiento. Además, la
+            legibilidad y el orden del código serán esenciales para
+            facilitar su comprensión y replicabilidad. No será necesario un
+            documento aparte para la documentación.
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <p class="">
+      El equilibrio entre un modelo preciso y una presentación profesional
+      del trabajo será clave para destacar en esta competición.
+    </p>
+
+    <h1 id="149af64c-2b39-807d-86c2-c3d0d862001b" class="">
+      ¿Qué tengo que enviar?
+    </h1>
+    <p id="149af64c-2b39-80d0-b51c-ea0275dc4487" class="">
+      Para cada <code>num_expediente</code> del conjunto de pruebas, se debe predecir la
+      <code>lesividad</code> que tendría. El archivo debe contener un encabezado y tener
+      el siguiente formato:
+    </p>
+    <p id="149af64c-2b39-809c-86ba-d666fec93d4f" class="">
+      <code
+      >num_expediente,lesividad<br />2022S000029,0<br />2024S000070,0<br />2020S002443,0<br />...<br
+      /></code>
+    </p>
+    <p id="149af64c-2b39-80a1-87f3-d9e85c1b72c6" class="">
+      Además del archivo CSV con las predicciones, es obligatorio entregar un notebook que
+      contenga el código utilizado para generar dichas predicciones. El notebook debe estar
+      correctamente documentado y organizado, facilitando la comprensión del proceso seguido.
+    </p>
+    <h1 id="149af64c-2b39-800f-9a0d-db8d5c5207c6" class="">
+      Descripciones de archivos y campos
+    </h1>
+    <ul id="149af64c-2b39-807d-8a8f-fd967f227f36" class="bulleted-list">
+      <li style="list-style-type: disc">
+        <strong>df_train.csv</strong> - Conjunto de datos que contiene
+        registros de accidentes de tráfico en la Ciudad de Madrid desde 2020
+        hasta 2024
+        <ul id="num_expediente" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>num_expediente</code> - Identificador único para cada
+            accidente registrado.
+          </li>
+        </ul>
+        <ul id="fecha" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>fecha</code> - Fecha en la que ocurrió el accidente.
+          </li>
+        </ul>
+        <ul id="hora" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>hora</code> - Hora aproximada del accidente.
+          </li>
+        </ul>
+        <ul id="localizacion" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>localizacion</code> - Descripción textual de la ubicación
+            del accidente (intersecciones, direcciones, etc.).
+          </li>
+        </ul>
+        <ul id="numero" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>numero</code> - Número de portal o referencia específica
+            dentro de la localización.
+          </li>
+        </ul>
+        <ul id="cod_distrito" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>cod_distrito</code> - Código numérico que identifica el
+            distrito de Madrid donde ocurrió el accidente.
+          </li>
+        </ul>
+        <ul id="distrito" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>distrito</code> - Nombre del distrito correspondiente al
+            código anterior.
+          </li>
+        </ul>
+        <ul id="tipo_accidente" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>tipo_accidente</code> - Tipo de accidente (colisión,
+            choque, caída, etc.).
+          </li>
+        </ul>
+        <ul id="estado_meteorologico" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>estado_meteorológico</code> - Condiciones meteorológicas
+            en el momento del accidente (despejado, lluvia, etc.).
+          </li>
+        </ul>
+        <ul id="tipo_vehiculo" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>tipo_vehiculo</code> - Tipo de vehículo implicado
+            (turismo, ciclomotor, etc.).
+          </li>
+        </ul>
+        <ul id="tipo_persona" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>tipo_persona</code> - Rol de la persona implicada
+            (conductor, pasajero, peatón, etc.).
+          </li>
+        </ul>
+        <ul id="rango_edad" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>rango_edad</code> - Grupo de edad de la persona implicada
+            en el accidente (ej. "De 21 a 24 años").
+          </li>
+        </ul>
+        <ul id="sexo" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>sexo</code> - Género de la persona implicada (Hombre,
+            Mujer o Desconocido).
+          </li>
+        </ul>
+        <ul id="coordenada_x_utm" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>coordenada_x_utm</code> - Coordenada UTM Este que indica
+            la posición geográfica del accidente.
+          </li>
+        </ul>
+        <ul id="coordenada_y_utm" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>coordenada_y_utm</code> - Coordenada UTM Norte que indica
+            la posición geográfica del accidente.
+          </li>
+        </ul>
+        <ul id="positiva_alcohol" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>positiva_alcohol</code> - Indicador de si la persona dio
+            positivo en alcohol (S: Sí, N: No).
+          </li>
+        </ul>
+        <ul id="positiva_droga" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>positiva_droga</code> - Indicador de si la persona dio
+            positivo en haber consumido sustancias estupefacientes (1.0: Sí, Vació: No).
+          </li>
+        </ul>
+        <ul id="lesividad" class="bulleted-list">
+          <li style="list-style-type: circle">
+            <code>lesividad</code> - Identificador de la lesión, con los siguientes valores posibles:
+            <ul>
+              <li>Asistencia sanitaria inmediata en centro de salud o mutua: 1</li>
+              <li>Sin asistencia sanitaria: 2</li>
+              <li>Ingreso inferior o igual a 24 horas: 3</li>
+              <li>Asistencia sanitaria sólo en el lugar del accidente: 4</li>
+              <li>Atención en urgencias sin posterior ingreso: 5</li>
+              <li>Ingreso superior a 24 horas: 6</li>
+              <li>Asistencia sanitaria ambulatoria con posterioridad: 7</li>
+              <li>Fallecido 24 horas: 8</li>
+              <li>Se desconoce: 9</li>
+            </ul>
+          </li>
+        </ul>
+
+      </li>
+    </ul>
+    <ul id="149af64c-2b39-8043-80cb-e83850d42f66" class="bulleted-list">
+      <li style="list-style-type: disc">
+        <strong>df_test.csv</strong>- Conjunto de datos sin la lesividad.
+        Los num_expediente de este dataset serán los utilizados para las
+        predicciones de lesividad
+      </li>
+    </ul>
+    <h1 id="149af64c-2b39-806e-81c3-eed5a1f6d524" class="">Datasets</h1>
+    <figure id="149af64c-2b39-809c-89bb-de04f268a472">
+      <div class="source">
+        <a
+                href="https://github.com/SergioMaza/Datathon1-NeuralTech/raw/refs/heads/master/datathon1_neuraltech_data.zip"
+        >datathon1-neuraltech.zip</a
         >
-      </footer>
-    </article>
-    <span class="sans" style="font-size: 14px; padding-top: 2em"></span>
-  </body>
+      </div>
+    </figure>
+    <h1 id="149af64c-2b39-8030-bbf3-d2099a13bf6f" class="">Créditos</h1>
+    <div class="credits-container">
+      <div class="credit">
+        <a
+                href="https://www.linkedin.com/in/luc%C3%ADa-doval-abilleira-67ba692a7/"
+                target="_blank"
+        >
+          <img
+                  src="https://avatars.githubusercontent.com/u/121610017?v=4"
+                  alt="Lucía Doval"
+          />
+          <p class="credit-name">Lucía Doval</p>
+        </a>
+      </div>
+      <div class="credit">
+        <a
+                href="https://www.linkedin.com/in/sergio-maza-herranz-513a87263/"
+                target="_blank"
+        >
+          <img
+                  src="https://avatars.githubusercontent.com/u/105326859?v=4"
+                  alt="Imagen 2"
+          />
+          <p class="credit-name">Sergio Maza</p>
+        </a>
+      </div>
+    </div>
+    <p id="149af64c-2b39-8094-8fd2-cbe9bdfc9af3" class=""></p>
+    <p id="149af64c-2b39-80cb-bfc8-f663384065bd" class=""></p>
+    <p id="149af64c-2b39-803b-8a8f-cd9d1b8a5a2e" class=""></p>
+  </div>
+  <footer>
+        <span class="sans"
+        >© 2024 Neuraltech | Todos los derechos reservados</span
+        >
+  </footer>
+</article>
+<span class="sans" style="font-size: 14px; padding-top: 2em"></span>
+</body>
 </html>
