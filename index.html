@@ -282,10 +282,6 @@
           de Madrid entre 2020 y 2024 por la Policía Municipal.
         </p>
         <p class="">
-          IMPORTANTE: Se incluye un registro por persona implicada en el
-          accidente .
-        </p>
-        <p class="">
           ¿Qué técnicas liderarán el camino? ¿Será un enfoque basado en modelos
           predictivos tradicionales como la regresión logística? ¿O tal vez un
           enfoque innovador en clustering y segmentación? ¡El desafío está
@@ -345,10 +341,16 @@
             <strong>df_train.csv</strong> - Conjunto de datos que contiene
             registros de accidentes de tráfico en la Ciudad de Madrid desde 2020
             hasta 2024
+            <ul id="id" class="bulleted-list">
+              <li style="list-style-type: circle">
+                <code>id</code> - Identificador único para registro.
+              </li>
+            </ul>
             <ul id="num_expediente" class="bulleted-list">
               <li style="list-style-type: circle">
                 <code>num_expediente</code> - Identificador único para cada
-                accidente registrado.
+                accidente registrado. Se incluye un registro por persona implicada en el
+                accidente, por lo que habrá varios registros de un mismo accidente pero de diferentes personas.
               </li>
             </ul>
             <ul id="fecha" class="bulleted-list">
@@ -480,13 +482,13 @@
           ¿Qué tengo que enviar?
         </h1>
         <p id="149af64c-2b39-80d0-b51c-ea0275dc4487" class="">
-          Para cada <code>num_expediente</code> del conjunto de pruebas, se debe
+          Para cada <code>id</code> del conjunto de pruebas, se debe
           predecir la <code>lesividad</code> que tendría. El archivo debe
           contener un encabezado y tener el siguiente formato:
         </p>
         <p id="149af64c-2b39-809c-86ba-d666fec93d4f" class="">
           <code
-            >id,lesividad<br />1,0<br />2,0<br />3,0<br />...<br
+            >id,lesividad<br />90910,0<br />90911,0<br />90912,0<br />...<br
           /></code>
         </p>
         <h1 id="guideline-title" class="">Guías de Participación</h1>
