@@ -187,7 +187,7 @@ span.sans {
 
 /* Estilo de las imágenes de los ganadores */
 .winners {
-  width: 20vw;
+  width: 15vw;
   height: auto; 
   background-color: #6c5ce7;
   object-fit: contain;
