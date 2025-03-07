@@ -170,8 +170,70 @@ span.sans {
   opacity: 0.7;
 }
 
+/* Estilos para la sección de ganadores */
+.winners-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem; 
+}
+
+.winners-row {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 2rem;
+}
+
+/* Estilo de las imágenes de los ganadores */
+.winners {
+  width: 20vw;
+  height: auto; 
+  background-color: #6c5ce7;
+  object-fit: contain;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px #2811db;
+}
+
+.winners:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px #2309e7;
+}
+
+.winners-position {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.winners-name {
+  font-size: 0.9rem;
+  color: #dfe6e9;
+}
+
+.winners-image {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.winners-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
+  .winners {
+    width: 30vw; 
+  }
+
+  .winners-row {
+    gap: 2rem;
+  }
+
   .page-title {
     font-size: 2rem;
   }
@@ -199,9 +261,14 @@ span.sans {
   }
 }
 
+/* Para pantallas más pequeñas (como móviles) */
 @media (max-width: 480px) {
   .page {
     padding: 1rem;
+  }
+
+  .winners {
+    width: 45vw;
   }
 
   .page-title {
