@@ -1,389 +1,311 @@
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Datathon I - Neuraltech</title>
-    <link rel="stylesheet" href="sytles.css">
-  </head>
-  <body>
-    <article id="149af64c-2b39-8055-b828-ecf611f03474" class="page sans">
-      <header>
-        <h1 class="page-title">Datathon I - Neuraltech</h1>
-        <p class="page-description"></p>
-      </header>
-      <div class="logos-container">
-        <a
-          href="https://www.instagram.com/c_int.uem/profilecard/?igsh=MTJlemoxMzNwOXExYw=="
-          target="_blank"
-        >
-          <img
-            src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/cint_logo.png"
-            alt="C_int Logo"
-            class="logo"
-          />
-        </a>
-        <a href="https://discord.gg/6nFxBzNNfP" target="_blank">
-          <img
-            src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/neuraltech_logo.png"
-            alt="Neuraltech Logo"
-            class="logo"
-          />
-        </a>
-        <a
-          href="https://universidadeuropea.com/conocenos/madrid/"
-          target="_blank"
-        >
-          <img
-            src="https://raw.githubusercontent.com/SergioMaza/Datathon1-NeuralTech/refs/heads/master/uem_logo.png"
-            alt="UEM Logo"
-            class="logo"
-          />
-        </a>
-      </div>
-      
-      <div class="page-body">
-        <h1 id="149af64c-2b39-809e-a414-c3fc57cd0359" class="">Descripción</h1>
-        <p id="149af64c-2b39-8062-91af-ea21622171d2" class="">
-          En la primera edición de la competición del Equipo de Inteligencia
-          Artificial del Club de Informática, presentamos un desafío fascinante:
-          analizar y modelar los accidentes de tráfico registrados en la Ciudad
-          de Madrid entre 2020 y 2024 por la Policía Municipal.
-        </p>
-        <p class="">
-          ¿Qué técnicas liderarán el camino? ¿Será un enfoque basado en modelos
-          predictivos tradicionales como la regresión logística? ¿O tal vez un
-          enfoque innovador en clustering y segmentación? ¡El desafío está
-          servido, y estamos emocionados por ver vuestra creatividad en acción!
-        </p>
-        <p id="149af64c-2b39-80fe-a515-fec97699e66a" class=""></p>
-        <h1 id="149af64c-2b39-803f-921a-f49baa63dd7b" class="">Evaluación</h1>
-        <p id="149af64c-2b39-80aa-bbf7-dcdc35ab9298" class="">
-          Los participantes serán evaluados en tres aspectos clave:
-        </p>
-        <ul id="evaluation-criteria" class="bulleted-list">
-          <li style="list-style-type: disc">
-            <strong>Precisión del Modelo:</strong>
-            <ul>
-              <li>
-                El rendimiento del modelo será el criterio principal de
-                evaluación. Se utilizarán métricas adecuadas según la naturaleza
-                del problema, como MAE, RMSE o R², para medir la calidad de las
-                predicciones realizadas.
-              </li>
-            </ul>
-          </li>
-          <li style="list-style-type: disc">
-            <strong>Limpieza del Notebook:</strong>
-            <ul>
-              <li>
-                Se valorará la claridad y organización del notebook presentado.
-                Un flujo de trabajo bien estructurado, con secciones claramente
-                diferenciadas y visualizaciones relevantes, será fundamental
-                para una buena puntuación.
-              </li>
-            </ul>
-          </li>
-          <li style="list-style-type: disc">
-            <strong>Documentación:</strong>
-            <ul>
-              <li>
-                El código debe estar correctamente documentado, con comentarios
-                que expliquen su propósito y funcionamiento. Además, la
-                legibilidad y el orden del código serán esenciales para
-                facilitar su comprensión y replicabilidad. No será necesario un
-                documento aparte para la documentación.
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <p class="">
-          El equilibrio entre un modelo preciso y una presentación profesional
-          del trabajo será clave para destacar en esta competición.
-        </p>
-        </p>
-        <h1 id="149af64c-2b39-800f-9a0d-db8d5c5207c6" class="">
-          Descripciones de archivos y campos
-        </h1>
-        <ul id="149af64c-2b39-807d-8a8f-fd967f227f36" class="bulleted-list">
-          <li style="list-style-type: disc">
-            <strong>df_train.csv</strong> - Conjunto de datos que contiene
-            registros de accidentes de tráfico en la Ciudad de Madrid desde 2020
-            hasta 2024
-            <ul id="id" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>id</code> - Identificador único para registro.
-              </li>
-            </ul>
-            <ul id="num_expediente" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>num_expediente</code> - Identificador único para cada
-                accidente registrado. Se incluye un registro por persona implicada en el
-                accidente, por lo que habrá varios registros de un mismo accidente pero de diferentes personas.
-              </li>
-            </ul>
-            <ul id="fecha" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>fecha</code> - Fecha en la que ocurrió el accidente.
-              </li>
-            </ul>
-            <ul id="hora" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>hora</code> - Hora aproximada del accidente.
-              </li>
-            </ul>
-            <ul id="localizacion" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>localizacion</code> - Descripción textual de la ubicación
-                del accidente (intersecciones, direcciones, etc.).
-              </li>
-            </ul>
-            <ul id="numero" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>numero</code> - Número de portal o referencia específica
-                dentro de la localización.
-              </li>
-            </ul>
-            <ul id="cod_distrito" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>cod_distrito</code> - Código numérico que identifica el
-                distrito de Madrid donde ocurrió el accidente.
-              </li>
-            </ul>
-            <ul id="distrito" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>distrito</code> - Nombre del distrito correspondiente al
-                código anterior.
-              </li>
-            </ul>
-            <ul id="tipo_accidente" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>tipo_accidente</code> - Tipo de accidente (colisión,
-                choque, caída, etc.).
-              </li>
-            </ul>
-            <ul id="estado_meteorologico" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>estado_meteorológico</code> - Condiciones meteorológicas
-                en el momento del accidente (despejado, lluvia, etc.).
-              </li>
-            </ul>
-            <ul id="tipo_vehiculo" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>tipo_vehiculo</code> - Tipo de vehículo implicado
-                (turismo, ciclomotor, etc.).
-              </li>
-            </ul>
-            <ul id="tipo_persona" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>tipo_persona</code> - Rol de la persona implicada
-                (conductor, pasajero, peatón, etc.).
-              </li>
-            </ul>
-            <ul id="rango_edad" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>rango_edad</code> - Grupo de edad de la persona implicada
-                en el accidente (ej. "De 21 a 24 años").
-              </li>
-            </ul>
-            <ul id="sexo" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>sexo</code> - Género de la persona implicada (Hombre,
-                Mujer o Desconocido).
-              </li>
-            </ul>
-            <ul id="coordenada_x_utm" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>coordenada_x_utm</code> - Coordenada UTM Este que indica
-                la posición geográfica del accidente.
-              </li>
-            </ul>
-            <ul id="coordenada_y_utm" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>coordenada_y_utm</code> - Coordenada UTM Norte que indica
-                la posición geográfica del accidente.
-              </li>
-            </ul>
-            <ul id="positiva_alcohol" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>positiva_alcohol</code> - Indicador de si la persona dio
-                positivo en alcohol (S: Sí, N: No).
-              </li>
-            </ul>
-            <ul id="positiva_droga" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>positiva_droga</code> - Indicador de si la persona dio
-                positivo en haber consumido sustancias estupefacientes (1.0: Sí,
-                Vació: No).
-              </li>
-            </ul>
-            <ul id="lesividad" class="bulleted-list">
-              <li style="list-style-type: circle">
-                <code>lesividad</code> - Identificador de la lesión, con los
-                siguientes valores posibles:
-                <ul>
-                  <li>Lesividad grave: 1</li>
-                  <li>Lesividad media: 2</li>
-                  <li>Lesividad leve: 3</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-        <ul id="149af64c-2b39-8043-80cb-e83850d42f66" class="bulleted-list">
-          <li style="list-style-type: disc">
-            <strong>df_test.csv</strong>- Conjunto de datos sin la lesividad.
-            Los id de este dataset serán los utilizados para las
-            predicciones de lesividad
-          </li>
-        </ul>
-        <h1 id="149af64c-2b39-807d-86c2-c3d0d862001b" class="">
-          ¿Qué tengo que enviar?
-        </h1>
-        <p id="149af64c-2b39-80d0-b51c-ea0275dc4487" class="">
-          Para cada <code>id</code> del conjunto de pruebas, se debe
-          predecir la <code>lesividad</code> que tendría. El archivo debe
-          contener un encabezado y tener el siguiente formato:
-        </p>
-        <p id="149af64c-2b39-809c-86ba-d666fec93d4f" class="">
-          <code
-            >id,lesividad<br />90910,0<br />90911,0<br />90912,0<br />...<br
-          /></code> 
-        </p>
-        <h1 id="guideline-title" class="">Guías de Participación</h1>
-        <p id="guideline-description" class="">
-          Cada equipo puede estar conformado por un máximo de 4 integrantes. La fecha límite
-          para la entrega de las propuestas es el
-          <strong>9 de Febrero</strong> (sujeta a cambios).
-        </p>
-        <p id="registro-grupos" class="">
-          Los grupos deben inscribirse previamente completando el siguiente formulario:
-          <a href="https://forms.gle/jmhV23CizTPp4JMKA" target="_blank" class="form-button">Inscribir Grupo</a>
-        </p>
-        <p id="correo-entrega" class="">
-          Los envíos deben realizarse al correo electrónico oficial del club:
-          <a href="mailto:iaclub.uem@gmail.com" class="">iaclub.uem@gmail.com</a>. 
-          Incluyendo 2 archivos:
-          <ul>
-            <li>Un archivo CSV con las predicciones generadas.</li>
-            <li>Un notebook con el código utilizado para generar dichas predicciones, correctamente documentado y organizado para facilitar la comprensión del proceso.</li>
-          </ul>
-        </p>
-        <h1 id="149af64c-2b39-806e-81c3-eed5a1f6d524" class="">Datasets</h1>
-        <figure id="149af64c-2b39-809c-89bb-de04f268a472">
-          <div class="source">
-            <a
-              href="https://github.com/SergioMaza/Datathon1-NeuralTech/raw/refs/heads/master/datathon1_neuraltech_data.zip"
-              >datathon1-neuraltech.zip</a
-            >
-          </div>
-        </figure>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuralHack 2026 - Hackathon de IA & Blockchain</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* --- ESTILOS GENERALES (Cyber Aesthetic) --- */
+        :root {
+            --bg-color: #050505;
+            --text-color: #ffffff;
+            --accent-orange: #FF5733; /* Naranja del cartel */
+            --accent-blue: #00A3E0;   /* Azul del cartel */
+            --dark-card: #111111;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        a { text-decoration: none; color: white; }
+
+        /* --- BOTONES --- */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--accent-orange);
+            color: white;
+            box-shadow: 0 0 15px rgba(255, 87, 51, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 87, 51, 0.8);
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--accent-blue);
+            color: var(--accent-blue);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent-blue);
+            color: #000;
+        }
+
+        /* --- HEADER / NAV --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(5, 5, 5, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: 900; color: white; }
+        .logo span { color: var(--accent-orange); }
+
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a:hover { color: var(--accent-orange); }
+
+        /* --- HERO SECTION (Portada) --- */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #050505 70%);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span { color: var(--accent-orange); }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* --- SECCIONES COMUNES --- */
+        section { padding: 80px 10%; }
         
-        <h1 id="winners-title" class="section-title">Ganadores de la Datathon</h1>
-        <br>
-        <div class="winners-container">
-          <div class="winners-row">
-            <a href="https://www.linkedin.com/in/jorge-de-la-pe%C3%B1a-jim%C3%A9nez-ab8610299/" target="_blank">
-              <img src="https://media.licdn.com/dms/image/v2/D4D03AQEBJDGzvMoy1A/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1729582872524?e=1746662400&v=beta&t=GoH7IisaSPbCNZcaKHYCzJ90cngpUmNUjeMu7VBiM1M" 
-                alt="Foto de Jorge de la Peña Jiménez" class="winners" style="box-shadow: 0 4px 10px 0 #FFD700;"/>
-              <p class="winners-position">1º Puesto</p>
-              <p class="winners-name">Jorge de la Peña Jiménez</p>
-            </a>
-          </div>
-          
-          <div class="winners-row">
-            <a href="https://www.linkedin.com/in/luis-miguel-aparicio-navas-2621072a2/" target="_blank">
-              <img src="https://media.licdn.com/dms/image/v2/D4D03AQFIbM4O9jD9rg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1704915529267?e=1746662400&v=beta&t=GmyiZmZyRO-0SnI1XgwzsazPrGIl_xuS2tVOXlhO_QE" 
-                alt="Foto de Luis Miguel Aparicio Navas" class="winners" style="box-shadow: 0 4px 10px 0 #C0C0C0;"/>
-              <p class="winners-position">2º Puesto</p>
-              <p class="winners-name">Luis Miguel Aparicio Navas</p>
-            </a>
-            <a href="https://www.linkedin.com/in/fabi%C3%A1n-delgado-d%C3%ADez-7385732a3/" target="_blank">
-              <img src="https://media.licdn.com/dms/image/v2/D4D03AQHMRjuNMJBIOA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1704921095942?e=1746662400&v=beta&t=6TBl4hElzCjQEa2R5lZ4sLJ-dsyHoIXmqLCNvK2QjzQ" 
-                alt="Foto de Fabián Delgado Díez" class="winners" style="box-shadow: 0 4px 10px 0 #C0C0C0;"/>
-              <p class="winners-position">2º Puesto</p>
-              <p class="winners-name">Fabián Delgado Díez</p>
-            </a>
-          </div>
-          
-          <div class="winners-row">
-            <a href="https://www.linkedin.com/in/davidcanorosillo/" target="_blank">
-              <img src="https://media.licdn.com/dms/image/v2/D4D03AQEnZTcaHZfL8g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710966636475?e=1746662400&v=beta&t=NkwTTlJLn13UVvXhDd6erJSpwWsMyI0WQXyemCy3zqY" 
-                alt="Foto de David Cano Rosillo" class="winners" style="box-shadow: 0 4px 10px 0 #CD7F32;"/>
-              <p class="winners-position">3º Puesto</p>
-              <p class="winners-name">David Cano Rosillo</p>
-            </a>
-            <a href="https://www.linkedin.com/in/marco-perez-gonzalez/" target="_blank">
-              <img src="https://media.licdn.com/dms/image/v2/D4D03AQFlwGCTb6W3UA/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1685700967407?e=1746662400&v=beta&t=6ANZe0XNupH9XdIZWO4JVasM_S0kFQlSXJWw5GnQA3Y" 
-                alt="Foto de Marco Pérez González" class="winners" style="box-shadow: 0 4px 10px 0 #CD7F32;"/>
-              <p class="winners-position">3º Puesto</p>
-              <p class="winners-name">Marco Pérez González</p>
-            </a>
-          </div>
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+            color: var(--accent-blue);
+        }
+
+        /* --- CARDS (Reto y Premios) --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--dark-card);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .card:hover { border-color: var(--accent-orange); transform: translateY(-5px); }
+        .card h3 { color: var(--accent-orange); margin-bottom: 15px; }
+
+        /* --- TIMELINE (Agenda) --- */
+        .timeline-item {
+            border-left: 3px solid var(--accent-blue);
+            padding-left: 30px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 15px;
+            height: 15px;
+            background: var(--accent-blue);
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: 5px;
+        }
+
+        .date { color: var(--accent-blue); font-weight: bold; font-size: 1.1rem; }
+
+        /* --- DESCARGAS --- */
+        .downloads { text-align: center; background: #111; }
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #222;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 10px;
+            border: 1px solid #444;
+            transition: 0.3s;
+        }
+        .download-btn:hover { border-color: var(--accent-orange); background: #1a1a1a; }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 50px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        footer .sponsors {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        footer .sponsor-text { font-weight: bold; color: white; margin: 0 10px; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav { display: none; } /* Menú simplificado para móvil */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Neural<span>Hack</span></div>
+        <nav>
+            <ul>
+                <li><a href="#reto">El Reto</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#premios">Premios</a></li>
+                <li><a href="TU_LINK_DEL_FORMULARIO_AQUI" class="btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Inscribirse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Participa en el <br><span>Hackathon</span></h1>
+        <p>Trabaja con datos reales y aprende blockchain de la mano de expertos del sector. <br>
+        <strong>Inscripción abierta hasta el 5 de febrero.</strong></p>
+        
+        <a href="TU_LINK_DEL_FORMULARIO_AQUI" class="btn btn-primary">¡Inscríbete Ahora!</a>
+        <br><br>
+        <small style="color: #777;">Gratuito • Modalidad Híbrida • Madrid</small>
+    </section>
+
+    <section id="reto">
+        <h2 class="section-title">El Reto: Tráfico Aéreo & Blockchain</h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>01. Visión Artificial</h3>
+                <p>Diseña un sistema capaz de detectar y clasificar vehículos (turismos, motos, pesados) utilizando imágenes aéreas capturadas por drones (UAV).</p>
+            </div>
+            <div class="card">
+                <h3>02. Análisis de Movilidad</h3>
+                <p>Genera métricas automáticas: conteo de vehículos, densidad de tráfico y estimación de ocupación en rotondas e intersecciones.</p>
+            </div>
+            <div class="card">
+                <h3>03. Evidencia Verificable</h3>
+                <p>Registra los resultados en la Blockchain (BSV) para garantizar que los datos sean inmutables, trazables y auditables.</p>
+            </div>
         </div>
-        
+    </section>
+
+    <section id="agenda" style="background-color: #0B0B0B;">
+        <h2 class="section-title">Fases del Evento</h2>
+        <div style="max-width: 800px; margin: 0 auto;">
+            <div class="timeline-item">
+                <div class="date">Hasta el 5 FEB (15:00)</div>
+                <h3>Cierre de Inscripciones</h3>
+                <p>Último día para enviar tu formulario. ¡No te quedes fuera!</p>
+            </div>
+            <div class="timeline-item">
+                <div class="date">6 - 8 FEB (Online)</div>
+                <h3>Fase General</h3>
+                <p>Desarrollo del proyecto. Entrega de código y documentación técnica. El jurado seleccionará a los finalistas.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="date">16 FEB (Presencial)</div>
+                <h3>Gran Final - International Lab</h3>
+                <p>Defensa de proyectos finalistas ante el jurado, cóctel y networking en Madrid International Labs.</p>
+            </div>
+            <div class="timeline-item">
+                <div class="date">18 FEB (Presencial)</div>
+                <h3>Entrega de Premios</h3>
+                <p>Ceremonia de ganadores en la Universidad Europea. Asistencia obligatoria para premiados.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="premios">
+        <h2 class="section-title" style="color: var(--accent-orange);">Premios</h2>
+        <div class="grid-container">
+            <div class="card" style="border-color: #FFD700;">
+                <h3 style="color: #FFD700;">🥇 1er Puesto</h3>
+                <p>Curso con Certificación oficial de <strong>Microsoft Azure AI</strong>.</p>
+            </div>
+            <div class="card" style="border-color: #C0C0C0;">
+                <h3 style="color: #C0C0C0;">🥈 2do Puesto</h3>
+                <p>Teclado Mecánico de <strong>Corsair</strong>.</p>
+            </div>
+            <div class="card" style="border-color: #CD7F32;">
+                <h3 style="color: #CD7F32;">🥉 3er Puesto</h3>
+                <p>Ratón Wireless Gaming de <strong>HyperX</strong>.</p>
+            </div>
+        </div>
+        <p style="text-align: center; margin-top: 30px; color: #aaa;">
+            *Todos los finalistas recibirán merchandising exclusivo y certificado de participación.
+        </p>
+    </section>
+
+    <section class="downloads" id="docs">
+        <h2 class="section-title">Documentación Oficial</h2>
+        <p style="margin-bottom: 30px;">Descarga las bases completas y los detalles técnicos del reto aquí:</p>
         
         <div>
-          <br><br>
-          <p id="guideline-description">
-          El jueves 6 de Marzo de 2025 se ha realizó la entrega de premios del primer datathon de NeuralTech.
-          Queremos agradecer a todos los participantes por formar parte de la primera edición de este evento. 
-          Ha sido una competencia muy emocionante y ha estado muy reñido. Nos ha impresionado el nivel de precisión, 
-          organización y documentación de los trabajos presentados.
-          </p>
-          <br>
-          <p id="guideline-description">
-            Esperamos que esta haya sido una experiencia enriquecedora y que hayais disfrutado 
-            del reto tanto como nosotros disfrutamos organizándolo. Agradecemos vuestro entusiasmo y compromiso, 
-            y os invitamos a seguir participando en futuras iniciativas de NeuralTech.
-          </p>
-          <br><br>
-          <p id="guideline-description ">
-            <b>🎉 ¡Felicidades a los ganadores y a todos los equipos que participaron! 🎉</b>
-          </p>
+            <a href="LINK_A_BASES_LEGALES.pdf" target="_blank" class="download-btn">📄 Descargar Bases Legales</a>
+            <a href="LINK_A_RETO_TECNICO.pdf" target="_blank" class="download-btn">📄 Detalles del Reto Técnico</a>
+            <a href="LINK_A_WORKSHOP.pdf" target="_blank" class="download-btn">📄 Info del Workshop BSV</a>
         </div>
-        
-          
-        <div class="winners-image">
-            <img src="grupo_ganadores.jpeg" alt="Foto de los ganadores y participantes">
-        </div>      
+    </section>
 
-        <h1 id="149af64c-2b39-8030-bbf3-d2099a13bf6f" class="">Créditos</h1>
-        <div class="credits-container">
-          <div class="credit">
-            <a
-              href="https://www.linkedin.com/in/luc%C3%ADa-doval-abilleira-67ba692a7/"
-              target="_blank"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/121610017?v=4"
-                alt="Lucía Doval"
-              />
-              <p class="credit-name">Lucía Doval</p>
-            </a>
-          </div>
-          <div class="credit">
-            <a
-              href="https://www.linkedin.com/in/sergio-maza-herranz-513a87263/"
-              target="_blank"
-            >
-              <img
-                src="https://avatars.githubusercontent.com/u/105326859?v=4"
-                alt="Imagen 2"
-              />
-              <p class="credit-name">Sergio Maza</p>
-            </a>
-          </div>
+    <footer>
+        <div class="sponsors">
+            <span class="sponsor-text">C-INT</span>
+            <span class="sponsor-text">Universidad Europea</span>
+            <span class="sponsor-text" style="color: var(--accent-blue);">BSV ASSOCIATION</span>
+            <span class="sponsor-text">iLAB</span>
+            <span class="sponsor-text">nwc10</span>
         </div>
-        <p id="149af64c-2b39-8094-8fd2-cbe9bdfc9af3" class=""></p>
-        <p id="149af64c-2b39-80cb-bfc8-f663384065bd" class=""></p>
-        <p id="149af64c-2b39-803b-8a8f-cd9d1b8a5a2e" class=""></p>
-      </div>
-      <footer>
-        <span class="sans"
-          >© 2024 Neuraltech | Todos los derechos reservados</span
-        >
-      </footer>
-    </article>
-    <span class="sans" style="font-size: 14px; padding-top: 2em"></span>
-  </body>
+        <p>¿Tienes dudas? Contáctanos: <a href="mailto:cint.uem@gmail.com" style="color: var(--accent-orange);">cint.uem@gmail.com</a></p>
+        <p>&copy; 2026 NeuralHack. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
 </html>
