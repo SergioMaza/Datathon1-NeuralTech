@@ -1,0 +1,167 @@
+/* --- ESTILOS GENERALES --- */
+:root {
+    --bg-color: #050505;
+    --text-color: #ffffff;
+    --accent-orange: #FF5733; 
+    --accent-blue: #00A3E0;   
+    --dark-card: #111111;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 { margin: 0; text-transform: uppercase; }
+a { text-decoration: none; color: white; }
+
+/* --- BOTONES --- */
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--accent-orange);
+    color: white;
+    box-shadow: 0 0 15px rgba(255, 87, 51, 0.4);
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 87, 51, 0.8);
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(5, 5, 5, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.logo { font-size: 1.5rem; font-weight: 900; color: white; }
+.logo span { color: var(--accent-orange); }
+
+nav ul { list-style: none; display: flex; gap: 20px; }
+nav a:hover { color: var(--accent-orange); }
+
+/* --- PORTADA --- */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #050505 80%);
+}
+
+.hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+.hero h1 span { color: var(--accent-orange); }
+.hero p { font-size: 1.2rem; color: #ccc; max-width: 600px; margin: 0 auto 40px auto; }
+
+/* --- SECCIONES --- */
+section { padding: 80px 10%; }
+.section-title {
+    text-align: center; font-size: 2.5rem; margin-bottom: 60px; color: var(--accent-blue);
+}
+
+/* --- CARDS --- */
+.grid-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+}
+.card {
+    background: var(--dark-card); padding: 30px; border-radius: 15px; border: 1px solid #333; transition: 0.3s;
+}
+.card:hover { border-color: var(--accent-orange); transform: translateY(-5px); }
+.card h3 { color: var(--accent-orange); margin-bottom: 15px; }
+
+/* --- AGENDA --- */
+.timeline-item {
+    border-left: 3px solid var(--accent-blue); padding-left: 30px; margin-bottom: 40px; position: relative;
+}
+.timeline-item::before {
+    content: ''; width: 15px; height: 15px; background: var(--accent-blue); border-radius: 50%; position: absolute; left: -9px; top: 5px;
+}
+.date { color: var(--accent-blue); font-weight: bold; font-size: 1.1rem; }
+
+/* --- DESCARGAS --- */
+.downloads { text-align: center; background: #111; }
+.download-btn {
+    display: inline-flex; align-items: center; background: #222; padding: 15px 25px; margin: 10px; border-radius: 10px; border: 1px solid #444; transition: 0.3s;
+}
+.download-btn:hover { border-color: var(--accent-orange); background: #1a1a1a; }
+
+/* --- FOOTER MODIFICADO (LOGOS GRANDES Y VISIBLES) --- */
+footer {
+    text-align: center;
+    padding: 80px 20px;
+    border-top: 1px solid #333;
+    font-size: 1rem;
+    color: #888;
+    background-color: #050505;
+}
+
+.footer-group {
+    margin-bottom: 60px; /* Separación entre grupos */
+}
+
+.footer-label {
+    display: block;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: bold;
+}
+
+.sponsors-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px; /* Espacio entre logos */
+}
+
+/* ESTILO CLAVE PARA LOS LOGOS */
+.sponsor-logo {
+    /* TAMAÑO GRANDE */
+    height: 90px;  
+    width: auto;
+    object-fit: contain;
+    
+    /* FILTRO DE VISIBILIDAD: */
+    /* Esto vuelve cualquier imagen (negra, azul, etc) a color BLANCO */
+    filter: brightness(0) invert(1); 
+    
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.sponsor-logo:hover {
+    /* Al pasar el mouse, se ven los colores originales */
+    filter: none; 
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* --- MÓVIL --- */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    nav { display: none; }
+    /* En móvil los logos se ajustan un poco más pequeños para caber */
+    .sponsor-logo { height: 60px; } 
+    .sponsors-row { gap: 30px; }
+}
