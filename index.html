@@ -5,195 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NeuralHack 2026 - Hackathon de IA & Blockchain</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        /* --- ESTILOS GENERALES (Cyber Aesthetic) --- */
-        :root {
-            --bg-color: #050505;
-            --text-color: #ffffff;
-            --accent-orange: #FF5733; /* Naranja del cartel */
-            --accent-blue: #00A3E0;   /* Azul del cartel */
-            --dark-card: #111111;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        a { text-decoration: none; color: white; }
-
-        /* --- BOTONES --- */
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--accent-orange);
-            color: white;
-            box-shadow: 0 0 15px rgba(255, 87, 51, 0.4);
-        }
-
-        .btn-primary:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(255, 87, 51, 0.8);
-        }
-
-        .btn-secondary {
-            border: 2px solid var(--accent-blue);
-            color: var(--accent-blue);
-            background: transparent;
-        }
-
-        .btn-secondary:hover {
-            background: var(--accent-blue);
-            color: #000;
-        }
-
-        /* --- HEADER / NAV --- */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 5%;
-            background-color: rgba(5, 5, 5, 0.9);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 1px solid #222;
-        }
-
-        .logo { font-size: 1.5rem; font-weight: 900; color: white; }
-        .logo span { color: var(--accent-orange); }
-
-        nav ul { list-style: none; display: flex; gap: 20px; }
-        nav a:hover { color: var(--accent-orange); }
-
-        /* --- HERO SECTION (Portada) --- */
-        .hero {
-            text-align: center;
-            padding: 100px 20px;
-            background: radial-gradient(circle at center, #1a1a1a 0%, #050505 70%);
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 20px;
-        }
-
-        .hero h1 span { color: var(--accent-orange); }
-
-        .hero p {
-            font-size: 1.2rem;
-            color: #ccc;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
-        }
-
-        /* --- SECCIONES COMUNES --- */
-        section { padding: 80px 10%; }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 60px;
-            color: var(--accent-blue);
-        }
-
-        /* --- CARDS (Reto y Premios) --- */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background: var(--dark-card);
-            padding: 30px;
-            border-radius: 15px;
-            border: 1px solid #333;
-            transition: 0.3s;
-        }
-
-        .card:hover { border-color: var(--accent-orange); transform: translateY(-5px); }
-        .card h3 { color: var(--accent-orange); margin-bottom: 15px; }
-
-        /* --- TIMELINE (Agenda) --- */
-        .timeline-item {
-            border-left: 3px solid var(--accent-blue);
-            padding-left: 30px;
-            margin-bottom: 40px;
-            position: relative;
-        }
-
-        .timeline-item::before {
-            content: '';
-            width: 15px;
-            height: 15px;
-            background: var(--accent-blue);
-            border-radius: 50%;
-            position: absolute;
-            left: -9px;
-            top: 5px;
-        }
-
-        .date { color: var(--accent-blue); font-weight: bold; font-size: 1.1rem; }
-
-        /* --- DESCARGAS --- */
-        .downloads { text-align: center; background: #111; }
-        .download-btn {
-            display: inline-flex;
-            align-items: center;
-            background: #222;
-            padding: 15px 25px;
-            margin: 10px;
-            border-radius: 10px;
-            border: 1px solid #444;
-            transition: 0.3s;
-        }
-        .download-btn:hover { border-color: var(--accent-orange); background: #1a1a1a; }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 50px;
-            border-top: 1px solid #333;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        footer .sponsors {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
-        }
-        
-        footer .sponsor-text { font-weight: bold; color: white; margin: 0 10px; }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            nav { display: none; } /* Menú simplificado para móvil */
-        }
-    </style>
+    <link rel="stylesheet" href="css/css-style.css">
 </head>
 <body>
 
@@ -204,7 +16,7 @@
                 <li><a href="#reto">El Reto</a></li>
                 <li><a href="#agenda">Agenda</a></li>
                 <li><a href="#premios">Premios</a></li>
-                <li><a href="TU_LINK_DEL_FORMULARIO_AQUI" class="btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Inscribirse</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSe--yQ-aMP4-od_crUqyYQ6B_-jN3c5OqT2RccfOvh14PfIQg/viewform?usp=dialog" class="btn-primary" style="padding: 10px 20px; font-size: 0.8rem;">Inscribirse</a></li>
             </ul>
         </nav>
     </header>
@@ -214,7 +26,7 @@
         <p>Trabaja con datos reales y aprende blockchain de la mano de expertos del sector. <br>
         <strong>Inscripción abierta hasta el 5 de febrero.</strong></p>
         
-        <a href="TU_LINK_DEL_FORMULARIO_AQUI" class="btn btn-primary">¡Inscríbete Ahora!</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe--yQ-aMP4-od_crUqyYQ6B_-jN3c5OqT2RccfOvh14PfIQg/viewform?usp=dialog" class="btn btn-primary">¡Inscríbete Ahora!</a>
         <br><br>
         <small style="color: #777;">Gratuito • Modalidad Híbrida • Madrid</small>
     </section>
@@ -289,20 +101,31 @@
         <p style="margin-bottom: 30px;">Descarga las bases completas y los detalles técnicos del reto aquí:</p>
         
         <div>
-            <a href="LINK_A_BASES_LEGALES.pdf" target="_blank" class="download-btn">📄 Descargar Bases Legales</a>
-            <a href="LINK_A_RETO_TECNICO.pdf" target="_blank" class="download-btn">📄 Detalles del Reto Técnico</a>
-            <a href="LINK_A_WORKSHOP.pdf" target="_blank" class="download-btn">📄 Info del Workshop BSV</a>
+            <a href="https://drive.google.com/file/d/1cR3EtohMlZUfXziyblojrc0iDSKpKP93/view?usp=sharing" target="_blank" class="download-btn">📄 Descargar Bases Legales</a>
+            <a href="https://drive.google.com/file/d/1jbi1UbK1g5DbkIcFvdNxeNP7LyxpvH22/view?usp=sharing" target="_blank" class="download-btn">📄 Detalles del Reto Técnico</a>
         </div>
     </section>
 
     <footer>
-        <div class="sponsors">
-            <span class="sponsor-text">C-INT</span>
-            <span class="sponsor-text">Universidad Europea</span>
-            <span class="sponsor-text" style="color: var(--accent-blue);">BSV ASSOCIATION</span>
-            <span class="sponsor-text">iLAB</span>
-            <span class="sponsor-text">nwc10</span>
+        <div class="footer-group">
+            <span class="footer-label">Organizado por</span>
+            <div class="sponsors-row">
+                <img src="img/cint.png" alt="Logo C-INT" class="sponsor-logo">
+                <img src="img/Uem.png" alt="Universidad Europea" class="sponsor-logo">
+            </div>
         </div>
+
+        <div class="footer-group">
+            <span class="footer-label">Patrocinado por</span>
+            <div class="sponsors-row">
+                <img src="img/bsv.png" alt="BSV Association" class="sponsor-logo">
+                <img src="img/ilab.jfif" alt="iLAB" class="sponsor-logo">
+                <img src="img/superpioneros.png" alt="Superpioneros" class="sponsor-logo">
+                <img src="img/code.png" alt="Codemotion" class="sponsor-logo">
+                </div>
+        </div>
+
+        <br>
         <p>¿Tienes dudas? Contáctanos: <a href="mailto:cint.uem@gmail.com" style="color: var(--accent-orange);">cint.uem@gmail.com</a></p>
         <p>&copy; 2026 NeuralHack. Todos los derechos reservados.</p>
     </footer>
